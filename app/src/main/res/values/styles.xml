@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowEnterTransition" tools:targetApi="lollipop">@transition/default_window_enter</item>
+        <item name="android:windowReturnTransition" tools:targetApi="lollipop">@transition/default_window_return</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.ChoreographyShare">
+        <item name="android:windowSharedElementEnterTransition">@transition/choreography_all_element_share_enter</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/choreography_all_element_share_return</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.ChoreographyFewShare">
+        <item name="android:windowSharedElementEnterTransition">@transition/choreography_few_element_share_enter</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/choreography_few_element_share_return</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar.Detail">
+    <item name="android:windowSharedElementEnterTransition">@transition/default_share</item>
+    <item name="android:windowSharedElementReturnTransition">@transition/default_share</item>
+
+</style>
+
+    <style name="AppTheme.NoActionBar.NavigationalTransition">
+        <item name="android:windowSharedElementEnterTransition">@transition/navigational_transition_share_enter</item>
+        <item name="android:windowSharedElementReturnTransition">@transition/navigational_transition_share_return</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme.Translucent">
+        <!-- using a semi-transparent window background for the drag-back gesture -->
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent.Login">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>

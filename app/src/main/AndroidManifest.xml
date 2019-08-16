@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.takahirom.materialelement">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ElementApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/element_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".motion.durationeasing.DurationAndEasingActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".motion.movement.MovementActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".motion.transforming.TransformingActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".motion.transforming.LoginActivity"
+            android:theme="@style/AppTheme.Translucent.Login" />
+        <activity
+            android:name=".motion.choreography.ChoreographyActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".motion.choreography.ShareAllElementActivity"
+            android:theme="@style/AppTheme.NoActionBar.ChoreographyShare" />
+        <activity
+            android:name=".motion.choreography.ShareFewElementActivity"
+            android:theme="@style/AppTheme.NoActionBar.ChoreographyFewShare" />
+        <activity
+            android:name=".motion.creative.CreativeCustomizationActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".pattern.loadingimages.LoadingImagesActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".pattern.transition.NavigationalTransitionActivity"
+            android:theme="@style/AppTheme.NoActionBar.Detail" />
+        <activity
+            android:name=".pattern.transition.ChildActivity"
+            android:theme="@style/AppTheme.NoActionBar.NavigationalTransition" />
+
+
+        <!-- TODO: If you can create ProductIcon use this -->
+        <!--<activity android:name=".ProductIconActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar"-->
+            <!--&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:id="@+id/all_content_element_all_layout"
+    android:transitionName="@string/transition_name_all_element_share"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/content_choreography"
+    tools:targetApi="lollipop">
+
+    <ImageView
+        android:id="@+id/all_element_share_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@null"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/all_content_element_share_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/all_element_share_image"
+        android:layout_toRightOf="@id/all_element_share_image"
+        android:text="All content elements are shared"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/all_element_share_image"
+        android:background="@android:drawable/divider_horizontal_bright" />
+
+    <TextView
+        android:id="@+id/all_element_share_no_share_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_margin="@dimen/spacing_normal_8dp"
+        android:layout_marginLeft="@dimen/spacing_normal_8dp"
+        android:text="While a surface is expanding, a significant number of elements should remain visible during the transition.\n\nComplex transitions should keep a single element visible."
+         />
+</RelativeLayout>

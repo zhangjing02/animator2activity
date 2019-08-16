@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_dynamic_durations"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.github.takahirom.materialelement.motion.choreography.ChoreographyActivity">
+    <!-- tools:showIn="@layout/activity_dynamic_durations" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.takahirom.materialelement.view.QuoteLayout
+            android:text="@string/choreography_abstract"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:listDivider" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginRight="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Continuity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="All content elements are shared"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginBottom="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_normal_8dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/all_element_share_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/spacing_normal_8dp"
+                android:layout_marginLeft="@dimen/spacing_normal_8dp"
+                android:layout_marginRight="@dimen/spacing_normal_8dp"
+                android:layout_marginStart="@dimen/spacing_normal_8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:stateListAnimator="@animator/raise">
+
+                <include layout="@layout/all_element_share_scene1" />
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Few or no content elements are shared"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_marginBottom="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_normal_8dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/few_element_share_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="@dimen/spacing_normal_8dp"
+                android:layout_marginEnd="@dimen/spacing_normal_8dp"
+                android:layout_marginLeft="@dimen/spacing_normal_8dp"
+                android:layout_marginRight="@dimen/spacing_normal_8dp"
+                android:layout_marginStart="@dimen/spacing_normal_8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:stateListAnimator="@animator/raise"
+                tools:targetApi="lollipop">
+
+                <include layout="@layout/few_element_share_scene1" />
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginRight="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Creation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?colorPrimary" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Creating new surfaces"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <ImageView
+            android:id="@+id/new_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal_8dp"
+            android:layout_marginBottom="@dimen/padding_large_24dp"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginStart="@dimen/spacing_large_32dp"
+            app:srcCompat="@drawable/ic_apps_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Start choreographing surfaces"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/start_choreographing_surfaces_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_normal_8dp"
+            android:text="start" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="380dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginRight="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:layout_marginBottom="@dimen/padding_normal_16dp"
+            android:text="Radial reaction"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?colorPrimary" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/radical_reaction_card"
+            android:layout_width="272dp"
+            android:layout_height="272dp"
+            android:layout_marginBottom="@dimen/spacing_normal_8dp"
+            android:layout_marginEnd="@dimen/spacing_normal_8dp"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginRight="@dimen/spacing_normal_8dp"
+            android:layout_marginStart="@dimen/spacing_normal_8dp"
+            android:clickable="true"
+            android:stateListAnimator="@animator/raise"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

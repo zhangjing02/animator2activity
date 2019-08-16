@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_movement"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".motion.movement.MovementActivity">
+    <!-- tools:showIn="@layout/activity_movement" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.github.takahirom.materialelement.view.QuoteLayout
+            android:text="@string/movement_abstract"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginRight="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Movement within screen bounds"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="?colorPrimary" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="Arc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <RelativeLayout
+            android:id="@+id/arc_scene_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/card_arc_scene1" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_8dp"
+            android:layout_marginTop="@dimen/spacing_large_32dp"
+            android:text="When not to arc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <RelativeLayout
+            android:id="@+id/not_arc_scene_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/card_arc_scene1" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
